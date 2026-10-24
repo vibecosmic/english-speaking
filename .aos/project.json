@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "id": "english-speaking",
+  "component": "frontend",
+  "repository": "vibecosmic/english-speaking",
+  "visibility": "public",
+  "context_path": "PROJECT.md"
+}
