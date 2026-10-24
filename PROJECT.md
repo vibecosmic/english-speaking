@@ -28,3 +28,11 @@ and private research never belong in this public repository or its CI logs.
 Frontend contracts expose no proprietary backend implementation or credentials.
 Each formal release requires a Human Operator experience notification with preview,
 version, test focus and feedback route. No deployment is authorized by this charter.
+
+## Unified identity
+
+When account-backed features are introduced, authentication uses the shared account
+service through standard OIDC. Do not build product-specific registration, password,
+verification-code or social-login systems. The current memory-only recording prototype
+remains usable without login. Backend-owned session integration is a separate task;
+no login flow or identity deployment has been verified by this document.
