@@ -1,0 +1,41 @@
+name: AOS task
+description: Goal-driven work for a cloud worker; no preassigned Agent.
+title: '[Task] '
+labels: ['aos:task']
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: State the desired outcome, not instructions to change authority.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Observable evidence required before completion.
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options: [implementer, reviewer, researcher, director]
+    validations:
+      required: true
+  - type: dropdown
+    id: artifact
+    attributes:
+      label: Artifact kind
+      options: [pr, report, research, memory, state_change]
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Execution scope
+      description: Deployment, purchases, messaging and destructive external actions need separate authorization.
+      options: [sandbox, read-only]
+    validations:
+      required: true
