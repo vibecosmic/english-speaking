@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <title>English Speaking Practice</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/app.js"></script>
+  </head>
+  <body data-state="idle">
+    <main>
+      <h1>Speaking practice</h1>
+      <p class="note">Your recording stays in this browser tab only. It is never uploaded or saved.</p>
+
+      <section aria-labelledby="prompt-heading" class="card">
+        <h2 id="prompt-heading">Read this sentence aloud</h2>
+        <p id="prompt-text" class="prompt" lang="en"></p>
+        <button id="next-prompt" type="button" class="secondary">Next sentence</button>
+      </section>
+
+      <section aria-label="Recording controls" class="card controls">
+        <button id="record" type="button">Record</button>
+        <button id="stop" type="button" disabled>Stop</button>
+        <button id="discard" type="button" class="secondary" disabled>Discard</button>
+        <span id="timer" class="timer" aria-hidden="true"></span>
+        <p id="status" role="status" aria-live="polite"></p>
+        <p id="error" role="alert"></p>
+      </section>
+
+      <section id="playback" aria-label="Your recording" class="card" hidden>
+        <h2>Listen back</h2>
+        <audio id="player" controls preload="metadata"></audio>
+        <aside class="tip">
+          <p id="tip-label" class="tip-label"></p>
+          <p id="tip-text"></p>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f7f5;
+  --fg: #1d1d1b;
+  --card: #ffffff;
+  --muted: #5c5c57;
+  --accent: #1f5fbf;
+  --danger: #b3261e;
+  --rec: #c62828;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171716;
+    --fg: #ececea;
+    --card: #232321;
+    --muted: #a8a8a2;
+    --accent: #8ab4f8;
+    --danger: #f2b8b5;
+    --rec: #ff8a80;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.5; }
+main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.5rem; margin: 0.5rem 0; }
+h2 { font-size: 1rem; margin: 0 0 0.5rem; color: var(--muted); }
+.note { color: var(--muted); font-size: 0.9rem; }
+.card { background: var(--card); border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+.prompt { font-size: 1.35rem; margin: 0 0 1rem; }
+.controls { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.controls p { flex-basis: 100%; margin: 0.25rem 0 0; }
+button {
+  min-height: 44px; min-width: 44px; padding: 0.5rem 1.1rem; font: inherit; font-weight: 600;
+  border-radius: 999px; border: 2px solid var(--accent); background: var(--accent); color: var(--card);
+  cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+.timer { font-variant-numeric: tabular-nums; color: var(--rec); font-weight: 600; }
+body[data-state='recording'] #stop { background: var(--rec); border-color: var(--rec); }
+body[data-state='recording'] .timer::before { content: '● '; }
+#error { color: var(--danger); }
+#error:empty, #status:empty { display: none; }
+audio { width: 100%; }
+.tip { border-left: 4px solid var(--muted); padding-left: 0.75rem; margin-top: 1rem; }
+.tip-label { font-size: 0.85rem; color: var(--muted); font-weight: 600; margin: 0; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

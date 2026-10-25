@@ -7,5 +7,7 @@ Executable work and current dependencies are in GitHub Issues. Roles claim when 
 - F003 Record actual-device trial and experience evidence; held until a working preview
   and Human Operator scheduling. Do not claim a release or device test before it occurs.
 
-No framework selected yet. F001 compares current stable options and picks a lightweight
-frontend stack with a lockfile and runnable CI. Backend/framework extraction is separate.
+F001 status: draft PR proposes a zero-dependency native web stack (ADR 0001) with
+deterministic recorder tests; awaiting independent review (F002). Open follow-ups:
+lockfile-locked TypeScript/ESLint dev dependencies once registry access is available,
+and physical-device verification (F003). Backend/framework extraction is separate.
