@@ -12,7 +12,7 @@
     "serve": "node scripts/serve.mjs dist",
     "dev": "node scripts/serve.mjs .",
     "lint": "node scripts/lint.mjs",
-    "typecheck": "npx --yes typescript@6.0.3 tsc -p tsconfig.json",
+    "typecheck": "npx --yes --package=typescript@6.0.3 -- tsc -p tsconfig.json",
     "test": "node --test tests/recorder.test.js tests/content.test.js",
     "check": "npm run lint && npm run test && npm run build"
   }
